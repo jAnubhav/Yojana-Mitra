@@ -13,11 +13,9 @@
           <img src="logo2.png" alt="Yojna Logo">
         </div>
         <nav class="nav">
-          <!-- Search Bar at Center -->
           <div class="search">
             <input type="text" placeholder="Search for a Scheme...">
           </div>
-          <!-- Links at Right -->
           <div class="right-links">
             <a href="#">Home</a>
             <a href="#">About Us</a>
@@ -25,8 +23,6 @@
           </div>
         </nav>
       </header>
-      
-      
 
   <div class="container">
     <aside class="sidebar">
@@ -35,8 +31,8 @@
         <p>M Baqir</p>
       </div>
       <ul class="menu">
-        <li><a href="#" class="active">Dashboard</a></li>
-        <li><a href="#">Schemes</a></li>
+        <li><a href="yojna.html">Dashboard</a></li>
+        <li><a href="#"class="active">Schemes</a></li>
         <li><a href="#">Documents</a></li>
         <li><a href="#">History</a></li>
         <li class="tools">
@@ -45,7 +41,6 @@
             <li><a href="#">Inbox</a></li>
             <li><a href="#">Setting</a></li>
             <li><a href="#">Logout</a></li>
-          
         </li>
       </ul>
     </aside>
@@ -61,10 +56,8 @@
               <span class="tag">Farmer</span>
             </div>
             
-              
               <button class="toggle-btn" id="toggle-btn">Check Eligibility</button>
               
-              <!-- Eligibility form that overlays on top of the page content -->
               <div class="eligibility-form" id="eligibility-form" style="display: none;">
                 <div class="eligibility-form-inner">
                   <h3>Eligibility Check</h3>
@@ -84,7 +77,6 @@
                     <button type="button" id="check-eligibility-btn">Check Eligibility</button>
                   </form>
               
-                  <!-- Eligibility message will appear here -->
                   <div class="eligibility-message" id="eligibility-result"></div>
                   <button id="close-btn" class="close-btn">Close</button>
                 </div>
@@ -192,46 +184,15 @@
   </footer>
 
 <script>
- // Toggle the eligibility form display
  document.getElementById('toggle-btn').addEventListener('click', function() {
     const eligibilityForm = document.getElementById('eligibility-form');
     const formIsVisible = eligibilityForm.style.display === 'flex';
-    
-    // Toggle form visibility
     eligibilityForm.style.display = formIsVisible ? 'none' : 'flex';
   });
 
-  // Eligibility check logic
-  document.getElementById('check-eligibility-btn').addEventListener('click', function() {
-    const age = document.getElementById('age').value;
-    const income = document.getElementById('income').value;
-    const businessType = document.getElementById('business-type').value;
-
-    let resultMessage = '';
-    let resultColor = '';
-
-    // Eligibility check conditions
-    if (age >= 18 && income <= 1000000 && businessType === 'rural') {
-      resultMessage = "Based on your inputs you are eligible for Support for Value Addition - Support to R&G units.";
-      resultColor = "green";
-    } else {
-      resultMessage = "Sorry, you are not eligible for this scheme.";
-      resultColor = "red";
-    }
-
-    // Display eligibility result
-    const resultElement = document.getElementById('eligibility-result');
-    resultElement.textContent = resultMessage;
-    resultElement.style.color = resultColor;
-  });
-
-  // Close the eligibility form overlay
   document.getElementById('close-btn').addEventListener('click', function() {
-    const eligibilityForm = document.getElementById('eligibility-form');
-    eligibilityForm.style.display = 'none';
+    document.getElementById('eligibility-form').style.display = 'none';
   });
 </script>
-
-
 </body>
 </html>
