@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>YojnaMitra Dashboard</title>
+  <link rel="stylesheet" href="scheme2css.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+          <img src="logo2.png" alt="Yojna Logo">
+        </div>
+        <nav class="nav">
+          <!-- Search Bar at Center -->
+          <div class="search">
+            <input type="text" placeholder="Search for a Scheme...">
+          </div>
+          <!-- Links at Right -->
+          <div class="right-links">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+          </div>
+        </nav>
+      </header>
+      
+      
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="profile">
+        <div class="avatar">M</div>
+        <p>M Baqir</p>
+      </div>
+      <ul class="menu">
+        <li><a href="#" class="active">Dashboard</a></li>
+        <li><a href="#">Schemes</a></li>
+        <li><a href="#">Documents</a></li>
+        <li><a href="#">History</a></li>
+        <li class="tools">
+            <br>
+          <span>Tools</span>
+            <li><a href="#">Inbox</a></li>
+            <li><a href="#">Setting</a></li>
+            <li><a href="#">Logout</a></li>
+          
+        </li>
+      </ul>
+    </aside>
+
+    <main class="dashboard">
+        <section class="schemes">
+            <h1>Support for Value Addition - Support to R&G Units</h1>
+            <h2>Ministry of Commerce and Industry</h2>
+          
+            <div class="tags">
+              <span class="tag">Agriculture</span>
+              <span class="tag">Subsidy</span>
+              <span class="tag">Farmer</span>
+            </div>
+            
+              
+              <button class="toggle-btn" id="toggle-btn">Check Eligibility</button>
+              
+              <!-- Eligibility form that overlays on top of the page content -->
+              <div class="eligibility-form" id="eligibility-form" style="display: none;">
+                <div class="eligibility-form-inner">
+                  <h3>Eligibility Check</h3>
+                  <form id="eligibility-form-inner">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" required>
+              
+                    <label for="income">Annual Income:</label>
+                    <input type="number" id="income" name="income" required>
+              
+                    <label for="business-type">Business Type:</label>
+                    <select id="business-type" name="business-type" required>
+                      <option value="rural">Rural</option>
+                      <option value="urban">Urban</option>
+                    </select>
+              
+                    <button type="button" id="check-eligibility-btn">Check Eligibility</button>
+                  </form>
+              
+                  <!-- Eligibility message will appear here -->
+                  <div class="eligibility-message" id="eligibility-result"></div>
+                  <button id="close-btn" class="close-btn">Close</button>
+                </div>
+              </div>
+
+            <br>
+            <br>
+            <nav class="navigation">
+                <div class="nav-line"></div>
+                <button class="nav-btn active">Details</button>
+                <button class="nav-btn">Benefits</button>
+                <button class="nav-btn">Eligibility</button>
+                <button class="nav-btn">Application Process</button>
+                <button class="nav-btn">Documents Required</button>
+                <button class="nav-btn">FAQs</button>
+                <button class="nav-btn">Source</button>
+                <div class="nav-line"></div>
+              </nav>
+              
+            <div class="scheme-content">
+              <section class="details-section">
+                <h3>Details</h3>
+                <p>The scheme "Support for Value Addition - Support to R&G units" is a Sub-Component of the Scheme "Integrated Coffee Development Project" by the Coffee Board, Department of Commerce, Ministry of Commerce and Industry. This scheme aims to enhance the quality of coffee products and achieve value addition through the introduction of improved technologies in roasting, grinding, and packaging which will result in boosting domestic coffee consumption and entrepreneurship in the coffee sector, especially in the non-traditional areas.</p>
+              </section>
+              <section class="benefits-section">
+                <h3>Benefits</h3>
+                <ul>
+                  <li>Roasting Units, Gourmet roasting units 1Kg to &lt;10Kg/batch, and small roasting units with a capacity of less than 25 kg capacity are eligible for subsidy support of 40% of the machinery cost with a ceiling of ₹10,00,000.</li>
+                  <li>For the SHGs, women entrepreneurs, SC/ ST, Minorities, and differently-abled beneficiaries, subsidy support is @50% of the machinery cost with a ceiling of ₹10,00,000.</li>
+                  <li>Support for gourmet roaster units would enable the roasting of specialized blends in smaller quantities. This may also help to encourage a large number of small players/ new entrepreneurs to take up this venture in non-traditional coffee-drinking areas.</li>
+                </ul>
+              </section>
+              <section class="eligibility-section">
+                <h3>Eligibility</h3>
+                <ul>
+                  <li>The applicants should be individual units, Partnership firms, self-help groups (SHG)/ Growers’ collectives interested in establishing coffee roasting units.</li>
+                  <li>The Scheme is applicable only for the establishment of new R&G units.</li>
+                  <li>The applicant’s unit must hold a valid business license from the respective statutory authorities.</li>
+                </ul>
+              </section>
+              <section class="application-process-section">
+                <h3>Application Process</h3>
+                <ul>
+                  <li><strong>Offline</strong></li>
+                  <li>Step 1: The interested applicant should take print of the prescribed format of the application form.</li>
+                  <li>Step 2: In the application form, fill in all the mandatory fields, paste the passport-sized photograph (signed across, if required), and attach copies of all the mandatory documents (self-attest, if required).</li>
+                  <li>Step 3: Submit the duly filled and signed application form along with the documents at the following address: The Divisional Head - Coffee Quality Division, Coffee Board, No.1, Dr Ambedkar Veedhi, Via., email: hdqc.coffeeboard@nic.in / hdqccoffeeboard@gmail.com.</li>
+                </ul>
+              </section>
+              
+              <section class="documents-required-section">
+                <h3>Documents Required</h3>
+                <ul>
+                  <li>Copy of the blueprint/layout plan for the proposed Research and Grant unit/facility.</li>
+                  <li>Copy of the Photo identity like Aadhaar or Ration card or Permanent Account Number (PAN) card or Passport or Driving License or Election Photo Identity Card, etc.</li>
+                  <li>Original copy of Tax Invoice / Cash Bill issued by the supplier.</li>
+                  <li>Attested copies of Bills in support of freight/installation/commissioning charges and insurance (if included in the total cost).</li>
+                  <li>Copy of warranty certificate.</li>
+                  <li>Notarized Copy of the lease agreement/rent agreement/ownership document in respect of the shop/building premises.</li>
+                  <li>Copy of license from municipal authorities.</li>
+                  <li>Copy of the Bank passbook of the applicant containing the information such as: Name of the Bank and Branch address, Account Holder Name, Account No, Indian Financial System Code (IFSC) code.</li>
+                  <li>Photographs of the new machinery installed for which subsidy is claimed.</li>
+                  <li>In the case of Scheduled Caste (SC) /Scheduled Tribe (ST) and differently-abled category beneficiaries applying individually, caste/community/disability certificate (with a disability of 40% and above) issued by the competent authority.</li>
+                </ul>
+              </section>
+              
+              <section class="faq-section">
+                <h3>Frequently Asked Questions</h3>
+                <ul>
+                  <li>Is there a subsidy limit for roasting units of specific capacities?</li>
+                  <li>Are there any special provisions for certain groups?</li>
+                  <li>What machinery combinations are eligible for subsidy under this scheme?</li>
+                  <li>How are applications prioritized?</li>
+                  <li>How is subsidy disbursed to the applicants?</li>
+                  <li>Can already existing units upgrade using this scheme?</li>
+                  <li>What happens if an applicant resorts to bribery or coercion during the application process?</li>
+                  <li>What is the eligibility criterion for smaller roasting units under the scheme?</li>
+                  <li>Are there specific categories exempt from certain fees or charges?</li>
+                  <li>Can applicants begin procurement and installation before receiving the feasibility report?</li>
+                  <li>Is there a timeline provided for when the subsidy will be released?</li>
+                  <li>How are applications assessed under this scheme?</li>
+                  <li>Can units installed before the scheme notification date receive the subsidy?</li>
+                  <li>What type of machinery combinations are eligible for subsidy support?</li>
+                  <li>What actions can lead to the rejection of an application?</li>
+                </ul>
+              </section>
+              
+              <section class="sources-section">
+                <h3>Sources And References</h3>
+                <ul>
+                  <li>Guidelines, And Application Form</li>
+                  <li>Grower's Registration (UMANG)</li>
+                  <li>Coffee Board - Contact Us</li>
+                </ul>
+              </section>              
+            </div>
+          </section>
+          
+      
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 YojnaMitra. All rights reserved.</p>
+  </footer>
+
+<script>
+ // Toggle the eligibility form display
+ document.getElementById('toggle-btn').addEventListener('click', function() {
+    const eligibilityForm = document.getElementById('eligibility-form');
+    const formIsVisible = eligibilityForm.style.display === 'flex';
+    
+    // Toggle form visibility
+    eligibilityForm.style.display = formIsVisible ? 'none' : 'flex';
+  });
+
+  // Eligibility check logic
+  document.getElementById('check-eligibility-btn').addEventListener('click', function() {
+    const age = document.getElementById('age').value;
+    const income = document.getElementById('income').value;
+    const businessType = document.getElementById('business-type').value;
+
+    let resultMessage = '';
+    let resultColor = '';
+
+    // Eligibility check conditions
+    if (age >= 18 && income <= 1000000 && businessType === 'rural') {
+      resultMessage = "Based on your inputs you are eligible for Support for Value Addition - Support to R&G units.";
+      resultColor = "green";
+    } else {
+      resultMessage = "Sorry, you are not eligible for this scheme.";
+      resultColor = "red";
+    }
+
+    // Display eligibility result
+    const resultElement = document.getElementById('eligibility-result');
+    resultElement.textContent = resultMessage;
+    resultElement.style.color = resultColor;
+  });
+
+  // Close the eligibility form overlay
+  document.getElementById('close-btn').addEventListener('click', function() {
+    const eligibilityForm = document.getElementById('eligibility-form');
+    eligibilityForm.style.display = 'none';
+  });
+</script>
+
+
+</body>
+</html>

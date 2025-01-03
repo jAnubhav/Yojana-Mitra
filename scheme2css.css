@@ -1,0 +1,389 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #32a852;
+    padding: 15px 20px;
+    color: white;
+  }
+  
+  .header .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .logo img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  /* Navbar */
+  .nav {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav .search {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center the search bar */
+    align-items: center;
+  }
+  
+  .nav .search input {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    width: 300px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    outline: none;
+  }
+  
+  .nav .search input::placeholder {
+    color: #aaa;
+    font-size: 14px;
+  }
+  
+  .nav .search button {
+    background: none;
+    border: none;
+    color: #32a852;
+    font-size: 18px;
+    margin-left: -35px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease;
+  }
+  
+  .nav .search button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Links at Right */
+  .right-links {
+    display: flex;
+    gap: 20px; /* Space between links */
+  }
+  
+  .right-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 14px;
+    position: relative; /* Needed for the hover effect */
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover Effect on Links */
+  .right-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+  }
+  
+  .right-links a:hover {
+    color: #ddd; /* Slightly lighter text on hover */
+  }
+  
+  .right-links a:hover::after {
+    width: 100%; /* Expands underline */
+  }
+  
+  
+  /* Container */
+  .container {
+    display: flex;
+    flex: 1;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .sidebar .profile {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar .profile .avatar {
+    width: 60px;
+    height: 60px;
+    background-color: #32a852;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+  }
+  
+  
+  .sidebar .menu {
+    list-style: none;
+  }
+  
+  .sidebar .menu a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: #333;
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+  
+  .sidebar .menu a.active,
+  .sidebar .menu a:hover {
+    background-color: #32a852;
+    color: white;
+  }
+
+  .dashboard {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  
+  .schemes{
+    margin-left: 10px;
+  }
+  
+
+  
+  .schemes h1 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #1b3a57;
+    margin-bottom: 5px;
+  }
+  
+  .schemes h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #5a7391;
+    margin-bottom: 15px;
+  }
+  
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+  
+  .tag {
+    background: #eef8f3;
+    color: #128251;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 12px;
+    padding: 5px 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .toggle-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0bae2e;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  .toggle-btn:hover {
+    background-color: #0056b3;
+  }
+
+  /* Modal/overlay style for the eligibility form */
+  .eligibility-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+    display: none; /* Hidden initially */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .eligibility-form-inner {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .eligibility-form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  .eligibility-form input,
+  .eligibility-form select,
+  .eligibility-form button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .eligibility-form button {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .eligibility-form button:hover {
+    background-color: #0056b3;
+  }
+
+  .eligibility-message {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    color: green;
+  }
+
+  .close-btn {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .close-btn:hover {
+    background-color: darkred;
+  }
+
+  
+  /* Navigation Buttons */
+  .nav-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+  }
+  
+  .nav-btn {
+    background: #f8f9fa;
+    color: #198754;
+    border: 1px solid #198754;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  .nav-btn:hover {
+    background: #198754;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px); /* Slight lift effect */
+  }
+  
+  /* Active State (Optional) */
+  .nav-btn.active {
+    background: #145d40;
+    color: white;
+    border-color: #145d40;
+  }
+  
+  
+  .scheme-content {
+    margin-top: 20px;
+  }
+  
+  .details-section,
+  .benefits-section,
+  .eligibility-section {
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    font-size: 20px;
+    color: #1b3a57;
+    border-bottom: 2px solid #128251;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 15px;
+    color: #434d5e;
+    line-height: 1.8;
+  }
+  
+  ul {
+    list-style: disc inside;
+    color: #434d5e;
+  }
+  
+  ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+  }
+  
+
+  /* Footer */
+  .footer {
+    background: #32a852;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+  }
+  

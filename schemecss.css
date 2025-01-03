@@ -1,0 +1,340 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #32a852;
+    padding: 15px 20px;
+    color: white;
+  }
+  
+  .header .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .logo img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  /* Navbar */
+  .nav {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav .search {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center the search bar */
+    align-items: center;
+  }
+  
+  .nav .search input {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    width: 300px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    outline: none;
+  }
+  
+  .nav .search input::placeholder {
+    color: #aaa;
+    font-size: 14px;
+  }
+  
+  .nav .search button {
+    background: none;
+    border: none;
+    color: #32a852;
+    font-size: 18px;
+    margin-left: -35px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease;
+  }
+  
+  .nav .search button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Links at Right */
+  .right-links {
+    display: flex;
+    gap: 20px; /* Space between links */
+  }
+  
+  .right-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 14px;
+    position: relative; /* Needed for the hover effect */
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover Effect on Links */
+  .right-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+  }
+  
+  .right-links a:hover {
+    color: #ddd; /* Slightly lighter text on hover */
+  }
+  
+  .right-links a:hover::after {
+    width: 100%; /* Expands underline */
+  }
+  
+  
+  
+  
+  /* Container */
+  .container {
+    display: flex;
+    flex: 1;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .sidebar .profile {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar .profile .avatar {
+    width: 60px;
+    height: 60px;
+    background-color: #32a852;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+  }
+  
+  
+  .sidebar .menu {
+    list-style: none;
+  }
+  
+  .sidebar .menu a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: #333;
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+  
+  .sidebar .menu a.active,
+  .sidebar .menu a:hover {
+    background-color: #32a852;
+    color: white;
+  }
+  
+  /* Dashboard */
+  .dashboard {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .welcome {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .welcome h1 span {
+    color: #32a852;
+  }
+  
+  /* Statistics Section */
+.statistics {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .stat-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .stat-item:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Individual Colors for Containers */
+  .total-schemes {
+    background-color: #f0f8ff; /* Light blue */
+  }
+  
+  .pending {
+    background-color: #ffebcd; /* Blanched almond */
+  }
+  
+  .completed {
+    background-color: #e6ffe6; /* Light green */
+  }
+  
+  .trending {
+    background-color: #ffe4e1; /* Misty rose */
+  }
+  
+  /* Icon Styling */
+  .stat-item .icon {
+    margin-right: 15px;
+  }
+  
+  .stat-item .icon img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* Text Styling */
+  .stat-item .stat-info h2 {
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    color: #333;
+  }
+  
+  .stat-item .stat-info p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .enrolled-schemes {
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+  }
+
+  .matched-profile {
+    font-size: 18px;
+    color: rgb(135, 134, 134);
+  }
+  
+  
+  .schemes {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .schemes h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .scheme {
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .scheme h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .scheme-ministry {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .scheme-description {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .tags span {
+    background: #32a852;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+  }
+  
+  
+  .tags span {
+    background: #32a852;
+    color: white;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Footer */
+  .footer {
+    background: #32a852;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+  }
+  
