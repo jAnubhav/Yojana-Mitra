@@ -1,0 +1,346 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+.hero .firstPage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire area */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* Navbar */
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1; /* Places the navbar above the image */
+    padding: 10px 20px;
+    margin-top: 20px;
+
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    margin-right: 100px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap:20px;
+}
+
+
+.navbar li {
+    margin-left: 20px;
+}
+
+/* Search Bar */
+.search-bar {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 200px; /* Adjust width as needed */
+    outline: none;
+    transition: box-shadow 0.3s;
+    margin-right: 150px;
+    height: 25px;
+    width: 230px;
+}
+
+.search-bar:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+/* Optional: style the hover effect */
+.search-icon:hover,
+.clear-icon:hover {
+    color: #000;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-family: 'Roboto';
+}
+
+.navbar a:hover {
+    color: #04792b; /* Gold color on hover */
+}
+
+
+.about {
+    position: absolute;
+    bottom: 20px; /* Adjust distance from the bottom */
+    left: 20px; /* Adjust distance from the left */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: white; /* Blue background */
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2; /* Place above the image */
+    transition: background-color 0.3s, transform 0.2s;
+    margin-bottom: 190px;
+    margin-left: 80px;
+    height: 45px;
+    width: 120px;
+}
+
+.about:hover {
+    background-color: #04792b; 
+    transform: scale(1.05); /* Slight zoom on hover */
+    color: white;
+}
+
+
+.p1{
+    text-align: center;
+    font-family: 'Roboto';
+    margin-top: -18px;
+    color: #525560;
+    font-weight:normal;
+    font-size: 18px;
+}
+
+.head1{
+    color:#4D4C4C;
+}
+
+.seeMore{
+    margin-top: 13px;
+    width: 140px;
+    height: 45px;
+    margin-left: 700px;
+    border-radius: 15px;
+    border: 2px solid #0DBF49 ;
+    color: #0DBF49;
+    font-weight: bold;
+    background-color: white;
+    font-size: 14px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: #0DBF49;
+}
+
+.stat {
+    text-align: center;
+    width: 160px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #C4C4C4;
+    height: 65px;
+    border-radius: 25px;
+    padding-top: 20px;
+    font-family: 'Roboto';
+}
+.stat span{
+    font-size: 30px;
+}
+
+.categories {
+    margin: 0;
+    padding: 0;
+    margin-top: -48px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #F0EFF7;
+    height: 100vh;
+}
+
+.categories h2 {
+    padding-top: 20px;
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 29px;
+}
+
+.categories p{
+    font-family: 'Roboto';
+    color: black;
+}
+
+.category-grid {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 60%;
+    display: grid;
+     grid-template-columns: repeat(4, 1fr);
+    gap: 30px; /* Adjust gap between images */
+}
+
+.category {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.category img {
+    max-width: 100%; 
+    height: auto;
+}
+
+.info{
+    width: 60%;
+    height: 70%;
+    background-color: black;
+}
+
+.AboutPage {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  .content {
+    width: 80%;
+    height: 70%;
+    background-image: url('Group 168.png');
+    background-color: black;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content horizontally */
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .text {
+    flex: 1; 
+    margin-right: 480px;
+    width: 50%;
+    text-align: left; /* Align the paragraph to the left */
+    font-size: 12px;
+    line-height: 1.5;
+    color: white;
+    font-family: 'Roboto';
+  }
+  
+  .text span {
+    margin-top: 20px;
+    font-size: 50px;
+    font-weight: bolder;
+    display: block;
+    text-align: center; /* Centers the "ABOUT" text */
+    margin-bottom: 20px; /* Add space between "ABOUT" and the paragraph */
+  }
+  
+  .text p {
+    margin: 0;
+    padding: 0;
+    font-size: 25px; /* Keep paragraph font size consistent */
+  }
+
+  
+.ab {
+    width: 40%; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional styling for rounded corners */
+  }
+  
+.contact{
+    background-color: #d4f5d4;
+}
+
+.img{
+   height: 100vh;
+}
+
+.i{
+    margin-top: 240px;
+    height: 340px;
+    margin-left: 120px;
+}
+.icon{
+    margin-left: 600px;
+    margin-top: -300px;
+  
+}
+
+.icon img{
+    margin-bottom: 30px;
+}
+
+
+.t {
+    margin-left: 700px;
+    margin-top: -400px;
+    font-family: 'Roboto';
+    display: flex; 
+    justify-content: space-around; 
+    gap: 15px; 
+  }
+  
+  .t ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .t ul h1 {
+    margin-bottom: 50px; /* Add space below the heading */
+    font-size: 24px; /* Adjust font size for the heading */
+    text-align: center; /* Center align the heading */
+  }
+  
+  .t ul li {
+    margin-bottom: 65px; /* Add space between list items */
+    font-size: 16px; /* Adjust font size for list items */
+  }
+  
+  .last{
+    margin-left: 950px;
+  }
+
+  .last h1{
+    margin-left: 80px;
+    margin-bottom: 0px;
+    color: #4D4C4C;
+    font-family: 'Roboto';
+  }
+
+  .last button{
+    width: 300px;
+    height: 30px;
+    background-color: #4D4C4C;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Roboto';
+    margin-top: 5px;
+  }
+
+  .last p{
+    color: #4D4C4C;
+    font-size: 16px;
+    font-family: 'Roboto';
+  }
