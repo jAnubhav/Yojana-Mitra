@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='./img/logo.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/dash_util.css') }}">
+    <title> {% block title %} {% endblock %} </title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='./img/logo with name.png') }}" alt="Yojna Logo">
+        </div>
+        <nav class="nav">
+            <div class="search">
+                <input type="text" placeholder="Search for a Scheme...">
+            </div>
+            <div class="right-links">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <div class="avatar">M</div>
+                <p>M Baqir</p>
+            </div>
+            <ul class="menu">
+                <li><a href="/" class="active">Dashboard</a></li>
+                <li><a href="/schemes">Schemes</a></li>
+                <li><a href="#">Documents</a></li>
+                <li><a href="#">History</a></li>
+                <li class="tools">
+                    <br>
+                    <span>Tools</span>
+                <li><a href="#">Inbox</a></li>
+                <li><a href="#">Setting</a></li>
+                <li><a href="#">Logout</a></li>
+                </li>
+            </ul>
+        </aside>
+
+        {% block content %} {% endblock %}
+
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 YojnaMitra. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

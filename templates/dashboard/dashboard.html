@@ -1,0 +1,92 @@
+{% extends "layouts/dashboard.html" %}
+
+{% block title %}M Baqir{% endblock %}
+
+{% block content %}
+
+<main class="dashboard">
+    <section class="welcome">
+        <h1>Welcome To <span>YojnaMitra</span></h1>
+        <p>Empowering rural citizens with AI-driven solutions to simplify access to government schemes and
+            benefits.</p>
+    </section>
+
+    <div class="statistics">
+        <div class="stat-item total-schemes">
+            <div class="icon">
+                <img src="totalscheme.png" alt="Trending">
+            </div>
+            <div class="stat-info">
+                <h2>1220</h2>
+                <p>Total Schemes</p>
+            </div>
+        </div>
+
+        <div class="stat-item pending">
+            <div class="icon">
+                <img src="pendingscheme.png" alt="Trending">
+            </div>
+            <div class="stat-info">
+                <h2>07</h2>
+                <p>Pending</p>
+            </div>
+        </div>
+
+        <div class="stat-item completed">
+            <div class="icon">
+                <img src="compscheme.png" alt="Trending">
+            </div>
+            <div class="stat-info">
+                <h2>43</h2>
+                <p>Completed</p>
+            </div>
+        </div>
+
+        <div class="stat-item trending">
+            <div class="icon">
+                <img src="trednigscheme.png" alt="Trending">
+            </div>
+            <div class="stat-info">
+                <h2>1550</h2>
+                <p>Trending</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="schemes">
+        <h2>Enrolled Schemes</h2>
+
+        <div class="scheme">
+            <h3>Support for Value Addition - Support to R&G Units</h3>
+            <p class="scheme-ministry"><strong>Ministry of Commerce and Industry</strong></p>
+            <p class="scheme-description">
+                This scheme aims to enhance the quality of coffee products and achieve value addition
+                through the introduction of improved technologies in roasting, grinding, and packaging.
+                This will result in boosting domestic coffee consumption and entrepreneurship in the
+                coffee sector.
+            </p>
+            <div class="tags">
+                <span>Agriculture</span>
+                <span>Subsidy</span>
+                <span>Farmer</span>
+            </div>
+        </div>
+
+        <div class="scheme">
+            <h3>Atma Nirbhar Bagwani Yojana</h3>
+            <p class="scheme-ministry"><strong>Arunachal Pradesh</strong></p>
+            <p class="scheme-description">
+                The scheme is part of the Atma Nirbhar program announced during the Budget session held
+                in February this year. A total amount of Rs 120 crores — Rs 60 crores for each scheme —
+                has been allocated to the two concerned departments of Agriculture and Horticulture.
+            </p>
+            <div class="tags">
+                <span>Umbrella Scheme</span>
+                <span>Farmer</span>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+{% endblock %}
