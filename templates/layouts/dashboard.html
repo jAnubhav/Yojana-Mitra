@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="{{ url_for('static', filename='./img/logo.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='./css/dash_util.css') }}">
+    {% block styles %} {% endblock %}
     <title> {% block title %} {% endblock %} </title>
 </head>
 
@@ -34,8 +35,8 @@
                 <p>M Baqir</p>
             </div>
             <ul class="menu">
-                <li><a href="/" class="active">Dashboard</a></li>
-                <li><a href="/schemes">Schemes</a></li>
+                <li class="{{ 'active' if active == 0 else '' }}"><a href="/">Dashboard</a></li>
+                <li class="{{ 'active' if active == 1 else '' }}"><a href="/schemes">Schemes</a></li>
                 <li><a href="#">Documents</a></li>
                 <li><a href="#">History</a></li>
                 <li class="tools">
