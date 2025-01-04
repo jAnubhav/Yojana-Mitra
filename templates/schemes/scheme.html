@@ -164,4 +164,16 @@
     </section>
 </main>
 
+<script>
+    document.getElementById('toggle-btn').addEventListener('click', function () {
+        const eligibilityForm = document.getElementById('eligibility-form');
+        const formIsVisible = eligibilityForm.style.display === 'flex';
+        eligibilityForm.style.display = formIsVisible ? 'none' : 'flex';
+    });
+
+    document.getElementById('close-btn').addEventListener('click', function () {
+        document.getElementById('eligibility-form').style.display = 'none';
+    });
+</script>
+
 {% endblock %}
