@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In / Sign Up Buttons</title>
+    <style>
+         body {
+            background-image: url('opp.png');
+            background-size: cover;
+            background-position: center; 
+            background-attachment: fixed; 
+            display: flex; 
+            flex-direction: column; 
+        }
+
+        .button-container{
+            margin-top: 570px;
+            margin-left: 110px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .signin-button {
+            background-color: #0DBF49; 
+            color: white;
+            padding: 15px 32px; 
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer; 
+            transition: background-color 0.3s ease; 
+            display: inline-block;
+            text-align: center; 
+            text-decoration: none;
+        }
+        .signup-button {
+            background-color: white; 
+            color: black;
+            padding: 15px 32px; 
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer; 
+            transition: background-color 0.3s ease; 
+            display: inline-block;
+            text-align: center; 
+            text-decoration: none;
+        }
+
+        .signin-button:hover{
+            background-color: white;
+            color: black;
+        }
+
+        .signup-button:hover{
+            background-color: #0DBF49;
+            color: white;
+        }
+
+        .or-text {
+            font-size: 18px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href="SignIn1.html" class="signin-button"><b>Sign In</b></a>
+        <b class="or-text">or</b>
+        <a href="SignUp.html" class="signup-button"><b>Sign Up</b></a>
+    </div>
+</body>
+</html>
