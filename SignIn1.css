@@ -1,0 +1,104 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+.yojnaImg{
+    margin-bottom: 570px;
+    margin-left: 15px;
+}
+.login-container,.bottom-container {
+    position: fixed;
+    background-color: #E1FEF3;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+    width: 400px;
+    z-index: 2;
+}
+
+.login-container h1 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #32403B;
+}
+.login-container h1 span {
+    color: #3927FF;
+}
+.bottom-container{
+    margin-top: 290px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: 250px;
+    background-color: #0DBF49; /* Back container color */
+    position: absolute; /* Ensures it can be placed behind */
+    z-index: 1; /* Lower z-index to place it behind */
+    top: 30px; /* Adjust to position it behind container 1 */
+    left: calc(50% - 230px); /* Center container 2 horizontally */
+    border-radius: 25px; /* Optional: Rounded corners */
+}
+.form-group {
+    margin-left: 16px;
+    margin-bottom: 15px;
+    width: 370px;
+    display: flex; /* Align items vertically within the form group */
+    align-items: center;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 30px;
+}
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+.forgot-pin {
+    margin-left: 230px;
+    font-size: 0.9rem;
+    color: #0F4FB1;
+    text-decoration: none;
+}
+.forgot-pin:hover {
+    text-decoration: underline;
+}
+.btn {
+    width: 180px;
+    height: 40px;
+    display: inline-block;
+    background-color: #0DBF49;
+    color: #fff;
+    /* padding: 10px 20px; */
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    padding-top: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.btn:hover {
+    background-color: #218838;
+}
+.sign-up {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+.sign-up a {
+    color: #007bff;
+    text-decoration: underline;
+}
+.sign-up a:hover {
+    text-decoration: underline;
+}

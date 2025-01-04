@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="SignUp.css">
+</head>
+<body>
+    <div>
+        <img class="yojnaImg" src="Yojna Mitra-Photoroom 1.png" alt="Yojna Mitra Logo">
+    </div>
+    <div class="bottom-container"></div>
+    <div class="signup-container">
+        <h2>Sign up for <span>DigiLocker</span></h2>
+        <form>
+            <!-- Personal Details -->
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Enter your mobile number" required>
+                <div class="b">
+                    <button>Generate OTP</button>
+                    <div class="otp-inputs">
+                        <input type="text" maxlength="1">
+                        <input type="text" maxlength="1">
+                        <input type="text" maxlength="1">
+                        <input type="text" maxlength="1">
+                    </div>
+                </div>
+              
+            </div>
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="mobile" name="mobile" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <!-- Government Details
+            <div class="form-group">
+                <label for="aadhaar">Aadhaar Number (Optional)</label>
+                <input type="text" id="aadhaar" name="aadhaar" placeholder="Enter Aadhaar number">
+            </div> -->
+
+            <!-- Account Details -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+            </div>
+
+            <!-- DigiLocker Link -->
+            <div class="form-group">
+                <a href="#" class="link-digilocker">Link DigiLocker Account</a>
+            </div>
+
+            <!-- Consent -->
+            <div class="form-check">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#">Terms and Conditions</a>.</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" id="privacy" name="privacy" required>
+                <label for="privacy">I allow the app to access and verify my documents.</label>
+            </div>
+
+            <!-- Submit Button -->
+            <a href="consentForm.html" class="submit-btn">Verify</a>
+
+        </form>
+    </div>
+</body>
+</html>

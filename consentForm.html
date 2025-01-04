@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>DigiLocker Consent Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; /* Stack the containers vertically */
+      height: 100vh;
+      background-color: #FFFFFF;
+    }
+.container2 {
+  margin-top: 40px;
+  width: 480px;
+  height: 450px;
+  background: #0DBF49;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1; /* Lower stacking order */
+}
+
+.container {
+  margin-top: 140px;
+  width: 480px;
+  height: 470px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  position: absolute; 
+  z-index: 2; /* Higher stacking order to appear on top of container2 */
+}
+
+    .container1 {
+      width: 480px;
+      height: 130px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 10px;
+      display: flex; /* Use flexbox */
+      justify-content: space-between; 
+      align-items: center; 
+      padding: 0 20px; 
+      z-index: 2;
+    }
+    .digilocker img, .digilocker {
+      height: 35px;
+      width: 140px; 
+
+    }
+    .yojna img{
+      height: 80px;
+      width: 90px;
+    }
+    .container img {
+      height: auto;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .header img {
+      height: 50px;
+    }
+    .content {
+      font-size: 14px;
+      line-height: 1.0;
+    }
+    .container p{
+      font-family: 'Roboto';
+    }
+
+    .content div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4px;
+      border-bottom: 1px solid black;
+    }
+    .content div:last-child {
+      border-bottom: none; /* Removes the border from the last item */
+    }
+    .content div img {
+      height: 20px;
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .buttons button {
+      width: 25%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 15px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .deny {
+      margin-left: 20px;
+      background: white;
+      color: #0DBF49;
+      border: 2px solid #0DBF49;
+    }
+    .allow{
+      background: #2ecc71;
+      color: white;
+      border: none;
+    }
+    .allow a{
+      text-decoration: none;
+      color: white;
+      border: none;
+    }
+
+    .lastp{
+      margin-left: 20px;
+      margin-top: 20px;
+      margin-bottom: 0px;
+    }
+  </style>
+</head>
+<body>
+  <!-- container1 placed above container -->
+  <div class="container1">
+    <div class="digilocker">
+      <img src="Group 907.png">
+    </div>
+    <div class="yojna">
+      <img src="Yojna Mitra-Photoroom 1.png">
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="content">
+      <p >Please provide your consent to share the following with <strong>YojnaMitra</strong>:</p>
+      <div>
+        <img src="Skip back.png" alt="Icon">
+        <p>Issued Documents</p>
+      </div>
+      <div>
+        <img src="220361 1.png" alt="Icon">
+        <p>DigiLocker Drive</p>
+      </div>
+      <div>
+        <img src="User.png" alt="Icon">
+        <p>Profile Information<br><span style="font-size: 12px; color: #C4C4C4;">Name, Date of Birth, Gender</span></p>
+      </div>
+      <div>
+        <img src="pngtree-flat-calendar-png-image_4590004-Photoroom 1.png" alt="Icon">
+        <p>Consent validity date (Today +30 days)<br><span style="font-size: 12px; color: #C4C4C4;">31-January-2025</span></p>
+      </div>
+      <div>
+        <img src="Black_question_mark 1.png" alt="Icon">
+        <p>Purpose<br><span style="font-size: 12px; color: #C4C4C4;">Know Your Customer</span></p>
+      </div>
+      <div class="lastp">
+        <p style="font-size: 12px; color: black;">
+          Consent validity is subject to applicable laws.<br><br>
+          By clicking 'Allow', you are giving consent to share with <strong>YojnaMitra</strong>.
+        </p>
+      </div>
+    </div >
+    <div class="buttons">
+      <button class="deny">Deny</button>
+      <!-- <button class="allow">Allow</button> -->
+     <button class="allow"><a href="HomePage.html" >Allow</a></button>
+    </div>
+  </div>
+  <div class="container2"></div>
+</body>
+
