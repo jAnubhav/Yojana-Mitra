@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>YojnaMitra Dashboard</title>
+  <link rel="stylesheet" href="verification.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="logo2.png" alt="Yojna Logo">
+    </div>
+    <nav class="nav">
+      <div class="search">
+        <input type="text" placeholder="Search for a Scheme...">
+      </div>
+      <div class="right-links">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="profile">
+        <div class="avatar">M</div>
+        <p>M Baqir</p>
+      </div>
+      <ul class="menu">
+        <li><a href="yojna.html">Dashboard</a></li>
+        <li><a href="schemehtml.html">Schemes</a></li>
+        <li><a href="document.html">Documents</a></li>
+        <li><a href="verification.html" class="active">Verification</a></li>
+        <li class="tools">
+          <br>
+          <span>Tools</span>
+          <li><a href="#">History</a></li>
+          <li><a href="#">Setting</a></li>
+          <li><a href="#">Logout</a></li>
+        </li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <h1>Verify Your Documents Effortlessly</h1>
+      <p>Upload, verify, and proceed securely in just a few clicks</p>
+      <br>
+      <h3>How it works</h3>
+      <div class="steps">
+        <div class="step">
+          <img src="ver1.png" alt="Upload Document">
+          <p>Upload Document</p>
+        </div>
+        <div class="arrow">→</div>
+        <div class="step">
+          <img src="ver2.png" alt="Automatic Verification">
+          <p>Automatic Verification</p>
+        </div>
+        <div class="arrow">→</div>
+        <div class="step">
+          <img src="ver3.png" alt="Instant Results">
+          <p>Instant Results</p>
+        </div>
+      </div>
+      <div class="upload-section">
+        <h2>Upload Your Documents</h2>
+        <form id="document-form">
+          <label for="document-type">Select Document Type:</label>
+          <select id="document-type">
+            <option>Aadhar Card</option>
+            <option>PAN Card</option>
+            <option>Passport</option>
+            <option>Driving License</option>
+            <option>Income Certificate</option>
+            <option>Marksheet</option>
+          </select>
+          <div class="upload-box" id="upload-box">
+            <label for="file-upload" class="upload-label">
+              Drag & Drop or Click to Upload
+              <input type="file" id="file-upload" style="display: none;" accept="image/*">
+            </label>
+            <img id="preview-image" src="" alt="Preview" style="display: none; max-width: 100%; height: auto; margin-top: 10px;">
+          </div>
+          <button type="submit" class="verify-btn">Verify</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 YojnaMitra. All rights reserved.</p>
+  </footer>
+
+<script>
+const uploadBox = document.getElementById('upload-box');
+const fileInput = document.getElementById('file-upload');
+const previewImage = document.getElementById('preview-image');
+const form = document.getElementById('document-form');
+
+fileInput.addEventListener('change', () => {
+  const file = fileInput.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      previewImage.src = e.target.result;
+      previewImage.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+  }
+});
+
+uploadBox.addEventListener('drop', (event) => {
+  event.preventDefault();
+  const file = event.dataTransfer.files[0];
+  fileInput.files = event.dataTransfer.files;
+
+  const reader = new FileReader();
+  reader.onload = function (e) {
+    previewImage.src = e.target.result;
+    previewImage.style.display = 'block';
+  };
+  reader.readAsDataURL(file);
+});
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const file = fileInput.files[0];
+
+  if (!file) {
+    alert('Please upload a valid document image first.');
+  } else {
+    setTimeout(() => {
+      alert('Your uploaded document is verified.');
+    }, 2000);
+  }
+});
+</script>
+</body>
+</html>
